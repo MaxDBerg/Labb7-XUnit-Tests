@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            StartUp();
+        }
+
+        static void StartUp()
+        {
+            Calculator calculator = new Calculator();
+            CalculatorConsoleUI calculatorConsoleUI = new CalculatorConsoleUI(calculator);
+            calculatorConsoleUI.Run();
         }
     }
 }
