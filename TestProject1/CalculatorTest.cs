@@ -66,13 +66,14 @@ namespace TestProject1
         [Fact]
         public void TestHistory()
         {
-            _fixture.CalculatorInstance.Addition(5, 3);
-            _fixture.CalculatorInstance.Subtraction(8, 3);
+            Calculator calculator = new Calculator();
+            calculator.Addition(1, 2);
+            calculator.Subtraction(8, 5);
 
-            var history = _fixture.CalculatorInstance.GetCalculationHistory();
+            var history = calculator.GetCalculationHistory();
             Assert.Equal(2, history.Count);
-            Assert.Equal("5 + 3 = 8", history[0]);
-            Assert.Equal("8 - 3 = 5", history[1]);
+            Assert.Equal("1 + 2 = 3", history[0]);
+            Assert.Equal("8 - 5 = 3", history[1]);
         }
 
         [Fact]

@@ -16,7 +16,7 @@ namespace TestProject1
 
         public CalculatorTestFixture()
         {
-            this.CalculatorInstance = new Calculator();
+            CalculatorInstance = new Calculator();
             // Perform any additional setup if needed
         }
 
